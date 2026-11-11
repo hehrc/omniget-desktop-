@@ -1,0 +1,42 @@
+{
+  "name": "omniget-desktop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "OmniGet-compatible local desktop suite: download manager, media player, study library and document tools.",
+  "license": "GPL-3.0-or-later",
+  "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "dev": "node server/index.js --dev",
+    "dev:client": "vite",
+    "build": "vite build",
+    "start": "NODE_ENV=production node server/index.js",
+    "test": "node --test --test-concurrency=1 tests/backend.test.js tests/tools.test.js tests/ytdlp.test.js",
+    "test:ui": "npm run build && node tests/ui.test.js",
+    "fixtures": "node scripts/make-fixtures.js",
+    "screenshots": "npm run build && node scripts/screenshots.js"
+  },
+  "dependencies": {
+    "@fontsource-variable/bricolage-grotesque": "^5.3.0",
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "busboy": "^1.6.0",
+    "cheerio": "^1.2.0",
+    "jimp": "^1.6.1",
+    "jsqr": "^1.4.0",
+    "jszip": "^3.10.2",
+    "marked": "^18.2.0",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^4.10.38",
+    "qrcode": "^1.5.4",
+    "svelte": "^5.57.3",
+    "undici": "^8.12.4"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^5.1.1",
+    "playwright-core": "^1.65.0",
+    "vite": "^6.4.6"
+  }
+}

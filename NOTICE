@@ -1,0 +1,68 @@
+OmniGet Desktop
+Copyright (C) 2026 the OmniGet Desktop contributors
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation, either version 3 of the License, or (at your option) any later
+version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with
+this program. If not, see <https://www.gnu.org/licenses/>.
+
+--------------------------------------------------------------------------------
+Upstream inspiration and attribution
+--------------------------------------------------------------------------------
+
+This application is an independent, local-first implementation inspired by the
+interface and scope of:
+
+    OmniGet
+    https://github.com/OpenSelena/omniget
+    Copyright (C) the OmniGet contributors
+    Licensed under the GNU General Public License v3.0
+
+The upstream project is a Tauri 2 + Rust + SvelteKit desktop application. This
+build is not a fork of that source tree and contains no proprietary assets from
+it. It reuses ideas, the general feature scope and the GPL-3.0 licensing model.
+The mascot ("Pip"), logo, icon set, copy and application code in this build are
+original work created for this implementation.
+
+Because the upstream project is GPL-3.0 licensed and this work is distributed
+under the same licence, the complete GPL-3.0 text is included in `LICENSE`.
+
+--------------------------------------------------------------------------------
+Third-party software
+--------------------------------------------------------------------------------
+
+Runtime dependencies are declared in `package.json` and retain their own
+licences. Notable components:
+
+  - Svelte 5 and Vite (MIT)
+  - Node.js built-in `node:sqlite` (MIT, Node.js)
+  - pdf-lib (MIT) and PDF.js (Apache-2.0)
+  - JSZip (MIT / GPL-3.0 dual)
+  - Jimp (MIT)
+  - cheerio (MIT)
+  - marked (MIT)
+  - qrcode (MIT) and jsQR (Apache-2.0)
+  - busboy (MIT)
+  - Inter, Bricolage Grotesque and IBM Plex Mono (SIL Open Font License 1.1),
+    loaded from `@fontsource` packages.
+
+Optional command-line tools are not bundled and are used only when already
+installed on the host: ffmpeg/ffprobe (LGPL/GPL depending on build) and yt-dlp
+(Unlicense). ZIP and PDF processing use the JavaScript dependencies listed
+above, not external qpdf/zip binaries.
+
+--------------------------------------------------------------------------------
+Legal scope
+--------------------------------------------------------------------------------
+
+OmniGet does not include DRM keys, licence circumvention, paywall bypasses,
+credential theft or authentication bypasses. It downloads only content the user
+is authorised to access. Users are responsible for complying with the terms of
+service of the sites they use and with applicable copyright law.
